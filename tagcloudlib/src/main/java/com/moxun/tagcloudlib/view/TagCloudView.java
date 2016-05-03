@@ -154,7 +154,8 @@ public class TagCloudView extends ViewGroup implements Runnable, TagsAdapter.OnD
     }
 
     public void setRadiusPercent(float percent) {
-        if (percent > 1f || percent < 0f) {
+        // INFO 2016-05-03 | increase radius percent 1f > 2f
+        if (percent > 2f || percent < 0f) {
             throw new IllegalArgumentException("percent value not in range 0 to 1");
         } else {
             radiusPercent = percent;
